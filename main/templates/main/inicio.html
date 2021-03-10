@@ -1,0 +1,39 @@
+
+{% extends 'main/base.html' %}
+
+
+
+{% block content %}
+
+  
+
+        <div class="row">
+        
+            {% for c in curso %}
+
+            <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                <span class="card-title">{{ c.curso_titulo }}</span>
+                <strong>{{c.curso_publicado}}</strong>
+                <p> {{ c.curso_contenido|safe }} </p>
+                </div>
+
+                <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+                </div>
+
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+
+{% endblock %}
+
+
+
+
